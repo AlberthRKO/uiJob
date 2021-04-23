@@ -39,7 +39,7 @@ class Screen extends StatelessWidget {
               elevation: 10,
               minWidth: 150,
               height: 40,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).primaryColor,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25),
               ),

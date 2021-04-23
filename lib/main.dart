@@ -30,18 +30,28 @@ class PantallaPrincipal extends StatelessWidget {
           ),
           headline3: TextStyle(
             fontSize: 20,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w800,
             color: Colors.white,
           ),
           headline4: TextStyle(
             fontSize: 20,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w800,
+            color: Color(0XFF030047),
+          ),
+          headline5: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.w800,
             color: Color(0XFF030047),
           ),
           bodyText1: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.bold,
             color: Color(0XFFB7B7D2),
+          ),
+          bodyText2: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w600,
+            color: Color(0XFF5F5FFF),
           ),
         ),
       ),

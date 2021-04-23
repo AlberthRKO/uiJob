@@ -1,6 +1,7 @@
 import 'package:empleo/Models/company.dart';
 import 'package:empleo/Models/empleo.dart';
 import 'package:empleo/components/carrusel.dart';
+import 'package:empleo/components/listas.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -33,6 +34,57 @@ class Contenido extends StatelessWidget {
     ),
   ];
 
+  List<Empleo> recentEmpleo = [
+    Empleo(
+      role: 'Frontend Web',
+      location: 'Sucre - Bolivia',
+      company: Company(
+        name: 'Tik Tok',
+        urlLogo: 'assets/logos/tiktok.svg',
+      ),
+    ),
+    Empleo(
+      role: 'Backend Python',
+      location: 'La Paz - Bolivia',
+      company: Company(
+        name: 'Twitch',
+        urlLogo: 'assets/logos/twitch.svg',
+      ),
+    ),
+    Empleo(
+      role: 'Desarrollador Movil',
+      location: 'Tarija - Bolivia',
+      company: Company(
+        name: 'Youtube',
+        urlLogo: 'assets/logos/youtube.svg',
+      ),
+    ),
+    Empleo(
+      role: 'Frontend Web',
+      location: 'Sucre - Bolivia',
+      company: Company(
+        name: 'Tik Tok',
+        urlLogo: 'assets/logos/tiktok.svg',
+      ),
+    ),
+    Empleo(
+      role: 'Backend Python',
+      location: 'La Paz - Bolivia',
+      company: Company(
+        name: 'Twitch',
+        urlLogo: 'assets/logos/twitch.svg',
+      ),
+    ),
+    Empleo(
+      role: 'Desarrollador Movil',
+      location: 'Tarija - Bolivia',
+      company: Company(
+        name: 'Youtube',
+        urlLogo: 'assets/logos/youtube.svg',
+      ),
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,6 +94,7 @@ class Contenido extends StatelessWidget {
             customBar(),
             textHeader(context),
             tarjetas(context),
+            recent(context),
           ],
         ),
       ),
@@ -113,6 +166,27 @@ class Contenido extends StatelessWidget {
           ),
         ),
         Carrusel(this.listaEmpleo),
+      ],
+    );
+  }
+
+  Widget recent(context) {
+    return Column(
+      children: [
+        Padding(
+          padding:
+              const EdgeInsets.only(right: 30, left: 30, top: 5, bottom: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text('Reciente', style: Theme.of(context).textTheme.bodyText1),
+              Text('Ver Todos', style: Theme.of(context).textTheme.bodyText2),
+            ],
+          ),
+        ),
+        // le mmandamos el array de empleos
+        Listas(this.recentEmpleo),
       ],
     );
   }

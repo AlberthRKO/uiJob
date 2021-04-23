@@ -49,9 +49,9 @@ class _itemCarouselState extends State<itemCarousel> {
       borderRadius: BorderRadius.circular(12),
       boxShadow: [
         BoxShadow(
-          color: this.widget.themeDark ? Colors.blue.shade200 : Colors.black26,
-          offset: Offset(0, 4),
-          blurRadius: 8,
+          color: Colors.blue.shade100,
+          offset: Offset(1, 4),
+          blurRadius: 5,
         ),
       ],
     );

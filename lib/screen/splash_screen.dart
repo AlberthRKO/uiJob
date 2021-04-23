@@ -41,7 +41,7 @@ class Screen extends StatelessWidget {
               height: 40,
               color: Theme.of(context).primaryColor,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(10),
               ),
               child: Text(
                 'Comencemos',
